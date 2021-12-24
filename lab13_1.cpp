@@ -3,11 +3,7 @@
 
 using namespace std; 
 
-long long int fibonacci(long long int x){
-    if(x > 1)
-        x = fibonacci(x-1) + fibonacci(x-2);
-    return x;
-}
+long long int fibonacci(long long int);
 
 int main(){
     clock_t start = clock();
@@ -16,4 +12,10 @@ int main(){
     double elapsed = double(end - start)/CLOCKS_PER_SEC;
     cout << "Elapsed Time: " << elapsed << " seconds.";
     return 0;
+} 
+
+long long int fibonacci(long long int x){
+    if(x > 1)
+        x = fibonacci(x-1) + fibonacci(x-2);
+    return x;
 }
